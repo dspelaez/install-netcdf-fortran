@@ -15,3 +15,11 @@ To execute this script you simply type:
 where `CC` and `FC` are the path to C and Fortran compilers. If you want another
 version of the dependencies you must edit the script manually.
 
+
+### Clean
+
+To clean the installation you should remove the tar files
+
+```
+rm -f *.tar *.tar.gz
+```
