@@ -9,7 +9,7 @@ set -e
 
 
 # ============================================================================
-#  Compilation of NetCDF4 Fortran libraries
+#  Installation of NetCDF4 Fortran libraries
 # ----------------------------------------------------------------------------
 #  
 #  Purpose:
