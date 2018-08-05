@@ -26,8 +26,8 @@ set -e
 # ============================================================================
 
 ## define compilers
-CC=${CC:-gcc}
-FC=${FC:-gfortran}
+CC=${CC:-/usr/bin/gcc}
+FC=${FC:-/usr/bin/gfortran}
 F90=${FC}
 F77=${FC}
 
