@@ -22,8 +22,7 @@ set -e
 #  Autor:
 #    Daniel Santiago
 #    github/dspelaez
-
-
+#
 # ============================================================================
 
 ## define compilers
