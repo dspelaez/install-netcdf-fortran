@@ -9,19 +9,19 @@ set -e
 
 
 # ============================================================================
-# Instalation of NetCDF4 Fortran libraries
+#  Compilation of NetCDF4 Fortran libraries
 # ----------------------------------------------------------------------------
+#  
+#  Purpose:
+#    This script get the given versions of the NetCD4 libreries and its
+#    dependencies and install them in the MAINDIR=/usr/local/netcdf directory
 # 
-# Porpuse:
-#   This script get the given versions of the NetCD4 libreries and its
-#   dependencies and install them in the MAINDIR=/usr/local/netcdf directory
-#
-# Usage:
-#   [sudo] CC=gcc FC=gfortran MAINDIR=/usr/local/netcdf ./install_netcdf.sh
-#
-# Autor:
-#   Daniel Santiago
-#   github/dspelaez
+#  Usage:
+#    [sudo] CC=gcc FC=gfortran MAINDIR=/usr/local/netcdf ./install_netcdf.sh
+# 
+#  Autor:
+#    Daniel Santiago
+#    github/dspelaez
 
 
 # ============================================================================
