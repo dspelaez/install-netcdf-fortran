@@ -43,10 +43,10 @@ NFTAG="4.4.4"
 
 ## donwload source code of depencies
 wget -nc -nv https://curl.haxx.se/download/curl-$CLTAG.tar.gz
-#wget -nc -nv https://zlib.net/fossils/zlib-$ZLTAG.tar.gz
-#wget -nc -nv https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-$H5TAG/src/hdf5-$H5TAG.tar 
-#wget -nc -nv ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-$NCTAG.tar.gz
-#wget -nc -nv ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-fortran-$NFTAG.tar.gz
+wget -nc -nv https://zlib.net/fossils/zlib-$ZLTAG.tar.gz
+wget -nc -nv https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-$H5TAG/src/hdf5-$H5TAG.tar 
+wget -nc -nv ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-$NCTAG.tar.gz
+wget -nc -nv ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-fortran-$NFTAG.tar.gz
 
 ## create config.log
 touch config.log
