@@ -14,7 +14,7 @@ set -e
 #  
 #  Purpose:
 #    This script get the given versions of the NetCD4 libreries and its
-#    dependencies and install them in the MAINDIR=/usr/local/netcdf directory
+#    dependencies and install them in the MAINDIR=/usr/local/netcdf/ directory
 # 
 #  Usage:
 #    [sudo] CC=gcc FC=gfortran MAINDIR=/usr/local/netcdf ./install_netcdf.sh
@@ -26,8 +26,8 @@ set -e
 # ============================================================================
 
 ## define compilers
-CC=${CC:-/usr/bin/gcc}
-FC=${FC:-/usr/bin/gfortran}
+CC=${CC:-gcc}
+FC=${FC:-gfortran}
 F90=${FC}
 F77=${FC}
 
