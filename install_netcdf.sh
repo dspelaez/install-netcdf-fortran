@@ -32,21 +32,24 @@ F90=${FC}
 F77=${FC}
 
 # main directory
-MAINDIR=${MAINDIR:-/usr/local/netcdf}
+MAINDIR=${MAINDIR:-./netcdf}
+MAINDIR=$(realpath $MAINDIR)
+mkdir -p $MAINDIR
+echo " --->> Creating directory $MAINDIR"
 
 # version of libs
 CLTAG="8.10.0"
 ZLTAG="1.3.1"
-H5TAG="1.14.5"
+H5TAG="1.13.0"
 NCTAG="4.9.2"
 NFTAG="4.6.1"
 
 ## donwload source code of depencies
-wget -nc -nv https://curl.haxx.se/download/curl-$CLTAG.tar.gz
-wget -nc -nv https://zlib.net/fossils/zlib-$ZLTAG.tar.gz
-wget -nc -nv https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-$H5TAG/src/hdf5-$H5TAG.tar 
-wget -nc -nv ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-$NCTAG.tar.gz
-wget -nc -nv ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-fortran-$NFTAG.tar.gz
+wget -nc -nv "https://curl.haxx.se/download/curl-$CLTAG.tar.gz"
+wget -nc -nv "https://zlib.net/fossils/zlib-$ZLTAG.tar.gz"
+wget -nc -nv "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-${H5TAG%.*}/hdf5-$H5TAG/src/hdf5-$H5TAG.tar"
+wget -nc -nv "https://downloads.unidata.ucar.edu/netcdf-c/$NCTAG/netcdf-c-$NCTAG.tar.gz"
+wget -nc -nv "https://downloads.unidata.ucar.edu/netcdf-fortran/$NFTAG/netcdf-fortran-$NFTAG.tar.gz"
 
 ## create config.log
 touch config.log
@@ -86,15 +89,15 @@ cd ..
 rm -rf hdf5-$H5TAG
 
 ## netcdf4-c
-tar -xf netcdf-$NCTAG.tar.gz
-cd netcdf-$NCTAG/
+tar -xf netcdf-c-$NCTAG.tar.gz
+cd netcdf-c-$NCTAG/
 NCDIR=$MAINDIR
-echo " --->> Compiling netcdf-$NCTAG"
+echo " --->> Compiling netcdf-c-$NCTAG"
 CPPFLAGS=-I${H5DIR}/include LDFLAGS=-L${H5DIR}/lib ./configure --prefix=${NCDIR} > config.log 2>&1
 make -j4 > config.log 2>&1
 make install > config.log 2>&1
 cd ..
-rm -rf netcdf-$NCTAG
+rm -rf netcdf-c-$NCTAG
 
 ## netcdf4-fortran
 tar -xf netcdf-fortran-$NFTAG.tar.gz
