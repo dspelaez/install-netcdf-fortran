@@ -1,0 +1,14 @@
+name: Run install_netcdf script
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run install_netcdf.sh
+      run: bash install_netcdf.sh
