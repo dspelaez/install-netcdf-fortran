@@ -1,9 +1,10 @@
-name: Run install_netcdf script
+name: Run script
 
 on:
   push:
-    branches:
-    - main
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
