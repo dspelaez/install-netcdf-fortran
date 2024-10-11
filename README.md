@@ -1,3 +1,5 @@
+[![Run script](https://github.com/dspelaez/install-netcdf-fortran/actions/workflows/run.yml/badge.svg)](https://github.com/dspelaez/install-netcdf-fortran/actions/workflows/run.yml)
+
 ### Readme
 
 This repo contains a small bash script to install the netcdf-fortran libraries
