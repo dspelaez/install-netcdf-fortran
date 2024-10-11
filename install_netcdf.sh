@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # install_netcdf.sh
-# Copyright (C) 2018 Daniel Santiago <dpelaez@cicese.edu.mx>
+# Copyright (C) 2018 Daniel Peláez-Zapata <daniel.pelaez-zapata@ucdconnect.ie>
 #
 # Distributed under terms of the GNU/GPL license.
 #
@@ -20,7 +20,7 @@ set -e
 #    [sudo] CC=gcc FC=gfortran MAINDIR=/usr/local/netcdf ./install_netcdf.sh
 # 
 #  Autor:
-#    Daniel Santiago
+#    Daniel Peláez-Zapata
 #    github/dspelaez
 #
 # ============================================================================
@@ -35,11 +35,11 @@ F77=${FC}
 MAINDIR=${MAINDIR:-/usr/local/netcdf}
 
 # version of libs
-CLTAG="7.61.0"
-ZLTAG="1.2.10"
-H5TAG="1.10.1"
-NCTAG="4.6.1"
-NFTAG="4.4.4"
+CLTAG="8.10.0"
+ZLTAG="1.3.1"
+H5TAG="1.14.5"
+NCTAG="4.9.2"
+NFTAG="4.6.1"
 
 ## donwload source code of depencies
 wget -nc -nv https://curl.haxx.se/download/curl-$CLTAG.tar.gz
