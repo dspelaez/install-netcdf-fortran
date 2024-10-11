@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run install_netcdf.sh
-      run: bash install_netcdf.sh
+      run: bash ${GITHUB_WORKSPACE}/install_netcdf.sh
